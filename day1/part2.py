@@ -19,25 +19,14 @@ def _solve(data: str) -> int:
 
 
 TEST_INPUT = '''\
-1000
-2000
-3000
-
-4000
-
-5000
-6000
-
-7000
-8000
-9000
-
-10000
+A Y
+B X
+C Z
 '''
 
 
 def test_solve():
-    assert _solve(TEST_INPUT) == 45000
+    assert _solve(TEST_INPUT) == 15
 
 
 def main(argv: Sequence[str] | None = None) -> int:
