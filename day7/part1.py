@@ -27,7 +27,7 @@ def _solve(data: str) -> int:
 
     for name, size in all_files.items():
         for d in all_dirs:
-            if name.startswith(f'{d}'):
+            if name.startswith(d):
                 all_dirs[d] += int(size)
 
     return sum(s for s in all_dirs.values() if s <= 100000)

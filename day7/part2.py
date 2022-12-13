@@ -27,7 +27,7 @@ def _solve(data: str) -> int:
 
     for name, size in all_files.items():
         for d in all_dirs:
-            if name.startswith(f'{d}'):
+            if name.startswith(d):
                 all_dirs[d] += int(size)
 
     TOTAL_FS_SIZE = 70000000
