@@ -30,7 +30,16 @@ def _solve(data: str) -> int:
             if name.startswith(f'{d}'):
                 all_dirs[d] += int(size)
 
-    return sum(s for s in all_dirs.values() if s <= 100000)
+    TOTAL_FS_SIZE = 70000000
+    UPDATE_SPACE = 30000000
+    unused_space = TOTAL_FS_SIZE - all_dirs['/']
+    needed_space = UPDATE_SPACE - unused_space
+
+    for s in sorted(all_dirs.values()):
+        if s >= needed_space:
+            return s
+
+    raise AssertionError('past end')
 
 
 TEST_INPUT = '''\
@@ -61,7 +70,7 @@ $ ls
 
 
 def test_solve():
-    assert _solve(TEST_INPUT) == 95437
+    assert _solve(TEST_INPUT) == 24933642
 
 
 def main(argv: Sequence[str] | None = None) -> int:
