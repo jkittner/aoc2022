@@ -1,4 +1,4 @@
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/theendlessriver13/aoc2022/main.svg)](https://results.pre-commit.ci/latest/github/theendlessriver13/aoc2022/main)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/jkittner/aoc2022/main.svg)](https://results.pre-commit.ci/latest/github/jkittner/aoc2022/main)
 
 # Advent of Code 2022
 
